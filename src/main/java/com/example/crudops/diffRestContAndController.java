@@ -10,8 +10,9 @@ import jakarta.validation.Valid;
 @RestController
 public class diffRestContAndController {
 	
-	
-	//@Target - you can find the details
+	//when we click on @RestController implementation:
+	//@Target - you can find the details that whether that annotation can be applied on class
+	//method, field, constructor, local variable, package.
 	//@Retention - 
 	//Source - It will disappear after compilation,it will not appear in the byte code
 	//RUNTIME - annotation which are discarded by NONE even after compilation or running it will stay in code.
