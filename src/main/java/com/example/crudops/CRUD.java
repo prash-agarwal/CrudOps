@@ -1,7 +1,9 @@
 package com.example.crudops;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 
 //when there is any annotation on top of class, it consist of @Component annotation inside it.
@@ -16,7 +18,14 @@ public class CRUD {
 	public void crudMethod() {
 		System.out.println("Crud method running successfullys");
 	}
-	// hashcode creating bean using objects in 2 different controller classes using new keyword	
+	
+//	@Bean
+//	public RestTemplate getRestTemplate2(){
+//		System.out.println("Inside RestTemplate");
+//		return new RestTemplate();
+//	}
+	// hashcode creating bean using objects in 2 different controller classes PersonController
+	//and EmployeeController using new keyword	
 //com.example.crudops.CRUD@34d90ec2
 //com.example.crudops.CRUD@79e8da15
 	

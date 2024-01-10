@@ -17,7 +17,7 @@ public class PersonController {
 //				Spring won't create multiple instances of the CRUD bean in this context.
 //				Both obj and obj1 will refer to the same instance of the CRUD bean managed 
 //				by the Spring container.
-//	
+	
 	@Autowired
 	DemoConfig demoConfig;
 	private static Logger logger=LoggerFactory.getLogger(PersonController.class); 	

@@ -7,9 +7,9 @@ public class B extends A{
 //        super(x, y); // Call to the parameterized constructor of class A
 //    }
 //	
-	
-	void foo()  
-	{  
-	  System.out.println("Inside the foo method of derived class.");    
-	}  
+//	
+//	void foo()  
+//	{  
+//	  System.out.println("Inside the foo method of derived class.");    
+//	}  
 }
