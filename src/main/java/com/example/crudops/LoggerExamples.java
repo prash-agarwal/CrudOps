@@ -24,6 +24,4 @@ public class LoggerExamples {
 	//UAT - involves verifying whether a system/software/application 
 	        //meets the requirements and expectations of its end users.Ex- Alpha Testing, Beta Testing 
 	//PROD - for end users.
-	
-	
 }
