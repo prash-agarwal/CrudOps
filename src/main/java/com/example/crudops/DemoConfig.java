@@ -57,3 +57,7 @@ public class DemoConfig {
      return "My name is Ram";
 	}
 }
+//While it is technically possible to have a class with both @Configuration and 
+//@RestController annotations, it is not a recommended practice. Mixing configuration
+//and controller logic in the same class violates the Single Responsibility Principle,
+//making the code harder to read, maintain, and test.

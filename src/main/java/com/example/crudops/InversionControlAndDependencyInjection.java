@@ -10,6 +10,4 @@ public class InversionControlAndDependencyInjection {
 	
 //Dependency Injection - we are using already created bean from IOC container and injecting
 //it in the dependent class, so that same object is referenced everywhere.
-
-
 }

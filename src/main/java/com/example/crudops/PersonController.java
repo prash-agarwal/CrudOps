@@ -32,10 +32,14 @@ public class PersonController {
 	logger.warn("Inside logger.warn");
 	logger.error("Inside logger.errors");
 	obj.crudMethod();
-	System.out.println(obj);
-	System.out.println(obj1);
+	System.out.println(obj);   //both of them return same hashcode
+	System.out.println(obj1);  //both of them return same hashcode
 	return "My name is Rajat";
 	}
+	//If we use scope of CRUD as prototype, then the above API will print different
+	//hashcode as follows:
+	//com.example.crudops.CRUD@7579878c
+	//com.example.crudops.CRUD@c1a1c7b
 
 	@GetMapping("/getbeanScopeExample")
 	public String exampleBeanScope() {
