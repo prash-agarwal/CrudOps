@@ -1,0 +1,47 @@
+#Docker 1
+# Use the official OpenJDK image as the base image
+# Here we are using the DockerFile inside the Project
+# To create the docker image, we will have to use the path inside the project
+# For example path here will be : /C:\Users\DELL\eclipse-workspace\crudops
+FROM openjdk
+
+# Set the working directory inside the container
+WORKDIR /usr/src/myapp
+
+# Copy the current directory contents into the container at /usr/src/myapp/
+COPY . /usr/src/myapp/
+
+# Set the default command to run when the container starts
+CMD ["java","-jar","crudops-0.0.1-SNAPSHOT.jar"]
+
+# Inform Docker that the container listens on port 8081
+EXPOSE 8081
+
+
+#Docker 2
+# here we are building image using maven first by building a Jar and then creating its image
+# using openjdk 
+FROM maven:3.9.6-amazoncorretto-21-al2023 AS build
+WORKDIR /home/app
+COPY . /home/app
+RUN mvn -f /home/app/pom.xml clean package
+
+FROM openjdk:21-jdk-slim
+EXPOSE 5000
+COPY --from=build /home/app/target/*.jar app.jar
+ENTRYPOINT [ "sh", "-c", "java -jar /app.jar" ]
+
+
+#Docker 3
+# Use the official OpenJDK 21 JDK slim image as the base image
+FROM openjdk:21-jdk-slim
+
+# Copy the JAR file from the target directory to the container's root 
+#directory and rename it to app.jar
+COPY target/*.jar app.jar
+
+# Inform Docker that the container listens on port 5000
+EXPOSE 8080
+
+# Set the default command to run when the container starts
+ENTRYPOINT ["java","-jar","/app.jar"]
