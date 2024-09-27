@@ -17,7 +17,8 @@ public class Docker {
 //		Docker username - prashagarwal21    , pwd - Jerry@2024
 //
 //		docker run hello-world
-//		Checks that if there is a image named hello-world present locally in the system. If it's not there, then it will download it and runs that image.
+//		Checks that if there is a image named hello-world present locally in the system. 
+//		If it's not there, then it will download it and runs that image.
 //		This command is used to create and start a new container from a specified image.
 //
 //		docker images
@@ -27,10 +28,12 @@ public class Docker {
 //		Command to remove a image
 //
 //		docker pull hello-world
-//		Checks that if there is a image named hello-world present locally in the system. If it's not there, then it will downloads it. It wont run that image.
+//		Checks that if there is a image named hello-world present locally in the system. 
+//		If it's not there, then it will downloads it. It wont run that image.
 //
 //		docker pull openjdk:18
-//		Checks that if there is a image named hello-world present locally in the system. If it's not there, then it will download it of particular version present in docker hub.
+//		Checks that if there is a image named hello-world present locally in the system. 
+//		If it's not there, then it will download it of particular version present in docker hub.
 //		https://hub.docker.com/_/openjdk
 //
 //		docker search mysql
@@ -43,21 +46,25 @@ public class Docker {
 //		To check all the containers that got created by running the image in the past.
 //
 //		docker run --name JavaOpenJdk 71260f256d19
-//		Used to run a image where we can provide a custom name to the container by passing the image id. 71260f256d19 is the Image Id
+//		Used to run a image where we can provide a custom name to the container by passing 
+//		the image id. 71260f256d19 is the Image Id
 //
 //		docker run -d -it --name java1openjdk 71260f256d19
 //		used to run in interactive mode and -d is used to run in detach mode
-//		If we dont run the image using detach mode, then container will run on cmd and cmd will get tied to that container and we wont be able to
+//		If we dont run the image using detach mode, then container will run on cmd and cmd 
+//		will get tied to that container and we wont be able to
 //		work on the cmd anymore for using docker commands.
 //
-//		Once we have created Container using above commands, we can check that what are the conatiners that got created and are running.
+//		Once we have created Container using above commands, we can check that what are 
+//		the conatiners that got created and are running.
 //		docker ps
 //
 //		C:\Users\DELL>docker ps
 //		CONTAINER ID   IMAGE          COMMAND    CREATED          STATUS          PORTS     NAMES
 //		dd6f37d6af51   71260f256d19   "jshell"   27 seconds ago   Up 16 seconds             javajdk
 //
-//		To access the conatiner created above, we will have to use the Command 'jshell' mentioned above in description of Container - 'javajdk'
+//		To access the conatiner created above, we will have to use the Command 'jshell' 
+//		mentioned above in description of Container - 'javajdk'
 //
 //		docker exec -it dd6f37d6af51 jshell
 //		We can use this command to execut and use the container created by specifying the conatiner 
